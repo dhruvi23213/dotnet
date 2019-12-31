@@ -1,0 +1,46 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication22
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int kilometer, Weight;
+            double cost =0.0;
+            Console.WriteLine("Enter a kilometer");
+            kilometer = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter a Weight");
+            
+            Weight = int.Parse(Console.ReadLine());
+            if (kilometer <= 100)
+            {
+                cost = Weight * 50;
+            }
+            else if (kilometer > 100 && kilometer <= 200)
+            {
+                cost = Weight * 65;
+            }
+            else if (kilometer > 200 && kilometer < 300)
+            {
+                cost = Weight * 90;
+            }
+            else if (kilometer >= 300)
+            {
+                cost = Weight * 120;
+            }
+            else
+            {
+                Console.WriteLine("sorry not declare kilometer");
+            }
+            Console.WriteLine("total cost =" + cost);
+            Console.Read();
+        }
+    }
+}
+
+        
